@@ -36,8 +36,8 @@ const Contactus = () => {
       </div>
 
       <div className="flex flex-col md:gap-x-5 md:flex-row justify-center py-3  lg:gap-x-32 items-center   ">
-        <div className="flex flex-col px-4 ">
-          <h2 className=" font-KaiseiHarunoUmi py-3 md:py-10 text-[color:var(--01,#B42120)] lg:text-[26px]  not-italic font-bold leading-[normal] ">
+        <div className="flex max-sm:pr-8 flex-col px-4 ">
+          <h2 className=" font-KaiseiHarunoUmi  py-3 md:py-10 text-[color:var(--01,#B42120)] lg:text-[26px]  not-italic font-bold leading-[normal] ">
             Address
           </h2>
           <p className=" lg:text-[18px]  text-justify  text-black font-inter   not-italic font-medium leading-[185.023%] tracking-[0.2px] ">
@@ -50,7 +50,7 @@ const Contactus = () => {
             <br /> TeleFax : 02764 -244381
           </p>
         </div>
-        <div className="md:pb-24  flex flex-col pr-24  ">
+        <div className="md:pb-24 pr-28 flex flex-col md:pr-10 lg:pr-0  ">
           <h2 className=" font-KaiseiHarunoUmi py-3 md:py-10 text-[color:var(--01,#B42120)] lg:text-[26px]  not-italic font-bold leading-[normal] ">
             Email
           </h2>

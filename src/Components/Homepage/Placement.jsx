@@ -63,7 +63,7 @@ const Placement = () => {
   ];
   return (
     <div>
-      <div className="lg:px-12 px-5 py-5">
+      <div className="lg:px-12 px-5 py-4 lg:py-5">
         <h1 className=" text-[color:var(--01,#B42120)] text-[20px] lg:text-[32px] font-KaiseiHarunoUmi not-italic font-semibold leading-[normal]">
           Placement Partners
         </h1>

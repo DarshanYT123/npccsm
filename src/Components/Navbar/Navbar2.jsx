@@ -2,9 +2,11 @@ import { navLinks } from "../../Components/Navbar/data/data";
 import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IoIosClose } from "react-icons/io";
-
+import Activedropdown from './Activedropdown'
 const Navbar2 = () => {
   const [navbar, setNavbar] = useState(false);
+
+  const [selected, setSelected] = useState("Activities ")
 
   return (
     <>
@@ -131,10 +133,21 @@ const Navbar2 = () => {
                 <path d="M1 0.75V50.75" stroke="black" stroke-opacity="0.4" />
               </svg>
 
-              <div className="flex flex-col px-4">
-                <h1 className="xl:text-[16px] lg:text-[14px] not-italic font-semibold  leading-normal font-inter tracking-[0.24px] text-[#B42120]">
+              <div className="flex flex-col cursor-pointer px-4">
+              <div className="right-menu  ">
+                                <h1 className="menu-text xl:text-[16px] lg:text-[14px] not-italic font-semibold  leading-normal font-inter tracking-[0.24px] text-[#B42120]">
                   Activities
                 </h1>
+                 {/* drop down desktop */}
+                <div className="dropdown-menu  rounded-md -right-10 z-50 ">
+                      <a href="/bba" className="py-2 text-center">BBA</a>
+                      <a href="/bca" className="py-2 text-center">BCA</a>
+                      <a href="/ncc" className="py-2 text-center">NCC</a>
+                      <a href="/nss" className="py-2 text-center">NSS</a>
+                      <a href="/sports" className="py-2 text-center">SPORTS</a>
+                      </div>
+                  {/*========================================== */}
+</div>
                 <h3 className="xl:text-[12px] lg:text-[10px] not-italic font-medium  leading-normal font-inter tracking-[0.12px] text-[#FFA800]">
                   Know More
                 </h3>
@@ -301,12 +314,14 @@ const Navbar2 = () => {
 
                 <div className="flex flex-col items-start justify-start">
                   <div className="flex flex-col pt-2">
+                    <a href="/desk">
                     <h1 className="text-[16px] not-italic font-semibold font-inter leading-normal tracking-[0.24px] text-[#B42120]">
                       Who We Are?
                     </h1>
                     <h3 className="text-[12px] not-italic font-medium  leading-normal font-inter tracking-[0.12px] text-[#FFA800]">
                       Administration
                     </h3>
+                    </a>
                   </div>
 
                   <div className="flex flex-col pt-2">
@@ -319,31 +334,49 @@ const Navbar2 = () => {
                   </div>
 
                   <div className="flex flex-col pt-2">
+                    <a href="/syllabus">
                     <h1 className="text-[16px] not-italic font-semibold  leading-normal font-inter tracking-[0.24px] text-[#B42120]">
                       Syllabus
                     </h1>
+                    </a>
                     <h3 className="text-[12px] not-italic font-medium  leading-normal font-inter tracking-[0.12px] text-[#FFA800]">
                       Curriculum
                     </h3>
                   </div>
 
                   <div className="flex flex-col pt-2">
+                  <a href="/placementpartner">
                     <h1 className="text-[16px] not-italic font-semibold  leading-normal font-inter tracking-[0.24px] text-[#B42120]">
                       Placements
                     </h1>
+                    </a>
                     <h3 className="text-[12px] not-italic font-medium  leading-normal font-inter tracking-[0.12px] text-[#FFA800]">
                       Know More
                     </h3>
                   </div>
 
                   <div className="flex flex-col pt-2">
+                  <Activedropdown selected={selected} setSelected={setSelected}/>
+                 
+                    </div>
+                  {/* <div className="flex flex-col pt-2">
                     <h1 className="text-[16px] not-italic font-semibold  leading-normal font-inter tracking-[0.24px] text-[#B42120]">
                       Activities
                     </h1>
+
+                <div className="dropdown-menuphone  rounded-md -right-10  ">
+                      <a href="/bba" className="py-2 text-center">BBA</a>
+                      <a href="/bca" className="py-2 text-center">BCA</a>
+                      <a href="/ncc" className="py-2 text-center">NCC</a>
+                      <a href="/nss" className="py-2 text-center">NSS</a>
+                      <a href="/sports" className="py-2 text-center">SPORTS</a>
+                      </div>
+
                     <h3 className="text-[12px] not-italic font-medium  leading-normal font-inter tracking-[0.12px] text-[#FFA800]">
                       Know More
                     </h3>
-                  </div>
+                  
+                  </div> */}
                 </div>
 
                 {/*======================================Navbar1  end============ */}

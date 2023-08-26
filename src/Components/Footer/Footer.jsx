@@ -134,7 +134,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="py-2 bg-[#B42120] md:px-28 lg:pb-4 px-4 md:pb-16 pb-28 flex   justify-between ">
+      <div className="py-2 bg-[#B42120] md:px-28 lg:pb-4 px-4 md:pb-16 pb-3 flex   justify-between ">
         <div className=" justify-start  ">
           <h2 className="  text-[#fff]  text-center text-[8px] md:text-[12px] lg:text-[16px] not-italic font-semibold leading-[157.833%] font-Poppins ">
             @ All rights reserved by NPCCSM

@@ -8,7 +8,7 @@ import PlacedStudent from "./PlacedStudent";
 const PlacementPartner = () => {
   return (
     <div>
-      <div className="lg:px-12   pt-10 px-5 py-5">
+      <div className="lg:px-12   pt-7 px-5 py-5">
         <h1 className=" text-[color:var(--01,#B42120)] font-KaiseiHarunoUmi md:text-[25px]  text-[16px]  lg:text-[32px] not-italic font-semibold leading-[normal]">
           Placement
         </h1>
@@ -52,7 +52,7 @@ const PlacementPartner = () => {
       </div>
 <Placement />
 <div className="lg:px-12   pt-10 px-5 py-5">
-        <h1 className=" text-[color:var(--01,#B42120)] font-KaiseiHarunoUmi md:text-[25px]  text-[16px]  lg:text-[32px] not-italic font-semibold leading-[normal]">
+        <h1 className=" text-[color:var(--01,#B42120)] font-KaiseiHarunoUmi md:text-[25px]  text-[20px]  lg:text-[32px] not-italic font-semibold leading-[normal]">
           Placed Student
         </h1>
       </div>

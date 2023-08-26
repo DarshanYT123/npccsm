@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination, Autoplay } from "swiper/modules";
 
 const LatestNews = () => {
   const current = new Date();
@@ -23,323 +31,184 @@ const LatestNews = () => {
   } ${current.getDate()}, ${current.getFullYear()}`;
 
   const [CalDate, setCalDate] = useState(new Date());
+  const NewsData = [
+    {
+      title: "IT Fair1",
+      description:
+        "IT fairs in colleges are great opportunities for students to gain exposure to a variety of technology-related companies and products. They provide students with the opportunity to explore different technologies and find out how they can be used in their daily lives.",
+    },
+    {
+      title: "IT Fair2",
+      description:
+        "IT fairs in colleges are great opportunities for students to gain exposure to a variety of technology-related companies and products. They provide students with the opportunity to explore different technologies and find out how they can be used in their daily lives.",
+    },
+    {
+      title: "IT Fair3",
+      description:
+        "IT fairs in colleges are great opportunities for students to gain exposure to a variety of technology-related companies and products. They provide students with the opportunity to explore different technologies and find out how they can be used in their daily lives.",
+    },
+    {
+      title: "IT Fair4",
+      description:
+        "IT fairs in colleges are great opportunities for students to gain exposure to a variety of technology-related companies and products. They provide students with the opportunity to explore different technologies and find out how they can be used in their daily lives.",
+    },
+    {
+      title: "IT Fair5",
+      description:
+        "IT fairs in colleges are great opportunities for students to gain exposure to a variety of technology-related companies and products. They provide students with the opportunity to explore different technologies and find out how they can be used in their daily lives.",
+    },
+    {
+      title: "IT Fair6",
+      description:
+        "IT fairs in colleges are great opportunities for students to gain exposure to a variety of technology-related companies and products. They provide students with the opportunity to explore different technologies and find out how they can be used in their daily lives.",
+    },
+    {
+      title: "IT Fair7",
+      description:
+        "IT fairs in colleges are great opportunities for students to gain exposure to a variety of technology-related companies and products. They provide students with the opportunity to explore different technologies and find out how they can be used in their daily lives.",
+    },
+    {
+      title: "IT Fair8",
+      description:
+        "IT fairs in colleges are great opportunities for students to gain exposure to a variety of technology-related companies and products. They provide students with the opportunity to explore different technologies and find out how they can be used in their daily lives.",
+    },
+    {
+      title: "IT Fair9",
+      description:
+        "IT fairs in colleges are great opportunities for students to gain exposure to a variety of technology-related companies and products. They provide students with the opportunity to explore different technologies and find out how they can be used in their daily lives.",
+    },
+    {
+      title: "IT Fair10",
+      description:
+        "IT fairs in colleges are great opportunities for students to gain exposure to a variety of technology-related companies and products. They provide students with the opportunity to explore different technologies and find out how they can be used in their daily lives.",
+    },
+  ];
   return (
     <>
       {/*==============================================desktop view================ */}
 
-      <div className="hidden lg:block">
+      <div className="">
         <div className="lg:px-10 px-5 py-5 ">
           <h1 className=" text-[color:var(--01,#B42120)] font-KaiseiHarunoUmi text-[20px] lg:text-[32px] not-italic font-semibold leading-[normal]">
             Latest News
           </h1>
         </div>
-
-        {/*  =================================  Latest News================================== */}
-        <div className="flex flex-row space-x-10 items-center justify-center py-10">
-          {/*====================== calender========================*/}
-          <div className="relative  ">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="140"
-              height="45"
-              viewBox="0 0 140 45"
-              fill="none"
-            >
-              <path
-                d="M1 1H110.203L138 44H1V1Z"
-                fill="#B42120"
-                stroke="#B42120"
-                stroke-width="2"
-              />
-            </svg>
-            <div class="flex w-full text-[17px] font-inter items-center text-[#FFF] not-italic leading-normal font-semibold justify-center py-12 px-4 absolute  right-[34%] lg:right-[36%] -top-10">
-              Calendar
+        <div className="flex flex-col px-16 gap-y-10">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-x-10 gap-y-8">
+          <div className="border-2 border-[#B42120] h-[342px] w-[300px] lg:w-1/3">
+            <div className="bg-[#B42120] text-white text-[17px] px-3 py-2">
+              <h1>Calendar</h1>
             </div>
-
-            <div className=" w-[330px] h-[312px] border-2  border-[#B42120] bg-[#FFF]">
+            <div>
               <Calendar onChange={setCalDate} value={CalDate} />
             </div>
           </div>
-
-          {/*====================== calender end========================*/}
-
-          {/* ===================== Curently=========================== */}
-          <div className="flex-col space-y-10 items-center justify-center">
-            <div className="relative">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="187"
-                height="45"
-                viewBox="0 0 187 45"
-                fill="none"
-              >
-                <path
-                  d="M1 1H146.87L184 44H1V1Z"
-                  fill="#B42120"
-                  stroke="#B42120"
-                  stroke-width="2"
-                />
-              </svg>
-              <div class="flex w-full font-inter text-[17px] items-center text-[#FFF] not-italic leading-normal font-semibold  justify-center py-12 px-4 absolute  right-[28%]  -top-10">
-                <h1>{date}</h1>
-              </div>
-
-              <div className="w-[360px] h-[67px] border-2  border-[#B42120] bg-[#FFF]">
-                <div className="flex items-center justify-center">
-                  <h2 className="text-[color:var(--02,#FFA800)] font-inter text-[22px] not-italic  font-semibol leading-normal pt-5">
-                    {" "}
-                    Currently No Event{" "}
-                  </h2>
-                </div>
-              </div>
+          <div className="border-2 border-[#B42120] h-[342px] overflow-hidden scrolling-card relative w-[300px] lg:w-1/3">
+            <div className="bg-[#B42120] text-white text-[17px] px-3 py-2 z-40 relative">
+              <h1>{date}</h1>
             </div>
-
-            {/*====================up comming event================== */}
-            <div className="relative">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="187"
-                height="45"
-                viewBox="0 0 187 45"
-                fill="none"
+            <div className="scrolling-content z-30 h-[330px]">
+              <Swiper
+                slidesPerView={window.innerHeight > 640 ? 2 : 1}
+                direction={"vertical"}
+                loop={true}
+                autoplay={{
+                  delay: 1500,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true,
+                }}
+                modules={[Autoplay]}
+                className="w-full h-full cursor-pointer"
               >
-                <path
-                  d="M1 1H146.87L184 44H1V1Z"
-                  fill="#B42120"
-                  stroke="#B42120"
-                  stroke-width="2"
-                />
-              </svg>
-              <div class="flex w-full text-[17px] items-center text-[#FFF] font-inter not-italic leading-normal font-semibold justify-center py-12 px-4  absolute right-[28%]  -top-10">
-                Upcoming events
-              </div>
-              <div className=" w-[360px] h-[163px] border-2  border-[#B42120] bg-[#FFF]">
-                <div className="flex items-center justify-center">
-                  <ul class="list-disc py-3">
-                    <li className="py-1 text-[color:var(--02,#FFA800)] text-[18px] font-inter not-italic  font-semibol leading-normal underline">
-                      Lorem ipsum dolor sit amet
-                    </li>
-                    <li className="py-1 text-[color:var(--02,#FFA800)] text-[18px] not-italic font-inter  font-semibol leading-normal underline">
-                      Lorem ipsum dolor sit amet
-                    </li>
-                    <li className="py-1 text-[color:var(--02,#FFA800)] text-[18px] not-italic font-inter font-semibol leading-normal underline">
-                      Lorem ipsum dolor sit amet
-                    </li>
-                    <li className="py-1 text-[color:var(--02,#FFA800)] text-[18px] not-italic font-inter font-semibol leading-normal underline">
-                      Lorem ipsum dolor sit amet
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                {NewsData.map((item, index) => {
+                  return (
+                    <SwiperSlide className="mb-10 lg:mb-0">
+                      <div key={index} className="p-2">
+                        <div className="flex flex-col gap-y-3">
+                          <h1 className="text-[#FFA800] font-bold font-inter text-[17px]">
+                            {item.title}
+                          </h1>
+                          <p className="font-medium text-[14px] text-justify font-inter leading-[20.58px]">
+                            {item.description}
+                          </p>
+                        </div>
+                        <hr className="mt-2 border-[1px] border-[#DEDEDE]" />
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
             </div>
-            {/*====================up comming event end================== */}
           </div>
-
-          {/* ===================== Curently end=========================== */}
-
-          {/*=====================================Latest News ================ */}
-          <div className="relative ">
-          <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="140"
-              height="45"
-              viewBox="0 0 140 45"
-              fill="none"
+          <div className="border-2 border-[#B42120] h-[342px] w-[300px] lg:w-1/3">
+            <div className="bg-[#B42120] text-white text-[17px] px-3 py-2">
+              <h1>Latest News</h1>
+            </div>
+            <div className="mt-5">
+              <ul className="flex flex-col items-start ml-8 justify-around gap-y-3 list-disc text-[#ffA800]">
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="border-2 border-[#B42120] lg:h-[100px] h-fit">
+          <div className="bg-[#B42120] text-white text-[17px] px-3 py-2">
+            <h1>Upcoming Events</h1>
+          </div>
+          <div className="my-5 px-4 lg:my-0 lg:mt-4">
+            <Swiper
+              slidesPerView={window.innerWidth > 640 ? 6 : 1}
+              loop={true}
+              autoplay={{
+                delay: 1500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
+              // centeredSlides={true}
+              modules={[Autoplay]}
+              className="ml-5"
             >
-              <path
-                d="M1 1H110.203L138 44H1V1Z"
-                fill="#B42120"
-                stroke="#B42120"
-                stroke-width="2"
-              />
-            </svg>
-            <div class="flex w-full text-[17px] items-center text-[#FFF] not-italic leading-normal font-inter font-semibold justify-center py-12 px-4  absolute right-[32%]   -top-10">
-              Latest News
-            </div>
-
-            <div className=" w-[360px] h-[312px] border-2  border-[#B42120] bg-[#FFF]">
-              <div className="flex items-center justify-center">
-                <ul class="list-disc py-5">
-                  <li className="py-5 text-[#000] font-inter text-[18px] not-italic  font-semibol leading-normal underline">
-                    Lorem ipsum dolor sit amet
-                  </li>
-                  <li className="py-5 text-[#000] text-[18px] font-inter not-italic  font-semibol leading-normal underline">
-                    Lorem ipsum dolor sit amet
-                  </li>
-                  <li className="py-5 text-[#000] text-[18px] not-italic font-inter  font-semibol leading-normal underline">
-                    Lorem ipsum dolor sit amet
-                  </li>
-                  <li className="py-5 text-[#000] text-[18px] not-italic  font-inter font-semibol leading-normal underline">
-                    Lorem ipsum dolor sit amet
-                  </li>
-                </ul>
-              </div>
-            </div>
+              <SwiperSlide>
+                <li className="list-disc text-[#ffA800]">Lorem ipsum dolor.</li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className="list-disc text-[#ffA800]">Lorem ipsum dolor.</li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className="list-disc text-[#ffA800]">Lorem ipsum dolor.</li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className="list-disc text-[#ffA800]">Lorem ipsum dolor.</li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className="list-disc text-[#ffA800]">Lorem ipsum dolor.</li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className="list-disc text-[#ffA800]">Lorem ipsum dolor.</li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className="list-disc text-[#ffA800]">Lorem ipsum dolor.</li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className="list-disc text-[#ffA800]">Lorem ipsum dolor.</li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className="list-disc text-[#ffA800]">Lorem ipsum dolor.</li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className="list-disc text-[#ffA800]">Lorem ipsum dolor.</li>
+              </SwiperSlide>
+            </Swiper>
           </div>
-
-          {/*=====================================Latest News ================ */}
         </div>
       </div>
-
-      {/*==============================================desktop view end ============== */}
-
-      {/*================================================Mobaile view =================== */}
-      <div className="block lg:hidden">
-        <div className="lg:px-12 px-5 py-5 ">
-          <h1 className=" text-[color:var(--01,#B42120)] text-[20px] lg:text-[32px] not-italic font-semibold font-KaiseiHarunoUmi leading-[normal]">
-            Latest News
-          </h1>
-        </div>
-
-        {/*  =================================  Latest News================================== */}
-        <div className="flex flex-col space-y-10 items-center justify-center py-10 ">
-          {/*====================== calender========================*/}
-          <div className="relative  ">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="140"
-              height="45"
-              viewBox="0 0 140 45"
-              fill="none"
-            >
-              <path
-                d="M1 1H110.203L138 44H1V1Z"
-                fill="#B42120"
-                stroke="#B42120"
-                stroke-width="2"
-              />
-            </svg>
-            <div class="flex w-full text-[17px] font-inter items-center text-[#FFF] not-italic leading-normal font-semibold justify-center py-12 px-4 absolute  right-[36%] -top-10">
-              Calendar
-            </div>
-
-            <div className=" w-[320px] h-[360px] md:w-[450px] border-2  border-[#B42120] bg-[#FFF]">
-              <Calendar onChange={setCalDate} value={CalDate} />
-            </div>
-          </div>
-
-          {/*====================== calender end========================*/}
-
-          {/* ===================== Curently=========================== */}
-          <div className="flex-col space-y-10 items-center justify-center">
-            <div className="relative">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="187"
-                height="45"
-                viewBox="0 0 187 45"
-                fill="none"
-              >
-                <path
-                  d="M1 1H146.87L184 44H1V1Z"
-                  fill="#B42120"
-                  stroke="#B42120"
-                  stroke-width="2"
-                />
-              </svg>
-              <div class="flex w-full font-inter text-[17px] items-center text-[#FFF] not-italic leading-normal font-semibold  justify-center py-12 px-4 absolute  right-[29%] md:right-[34%]  -top-10">
-                Aug 8, 2023
-              </div>
-
-              <div className="w-[320px] md:w-[450px] h-[87px] border-2  border-[#B42120] bg-[#FFF]">
-                <div className="flex items-center justify-center">
-                  <h2 className="text-[color:var(--02,#FFA800)] font-inter text-[22px] not-italic  font-semibol leading-normal pt-5">
-                    {" "}
-                    Currently No Event{" "}
-                  </h2>
-                </div>
-              </div>
-            </div>
-
-            {/*====================up comming event================== */}
-            <div className="relative">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="187"
-                height="45"
-                viewBox="0 0 187 45"
-                fill="none"
-              >
-                <path
-                  d="M1 1H146.87L184 44H1V1Z"
-                  fill="#B42120"
-                  stroke="#B42120"
-                  stroke-width="2"
-                />
-              </svg>
-              <div class="flex w-full text-[17px] items-center text-[#FFF] font-inter not-italic leading-normal font-semibold justify-center py-12 px-4  absolute   right-[26%] md:right-[32%] -top-10">
-                Upcoming events
-              </div>
-              <div className=" w-[320px] md:w-[450px] h-[193px] border-2  border-[#B42120] bg-[#FFF] ">
-                <div className="flex items-center justify-center">
-                  <ul class="list-disc py-5">
-                    <li className="py-2 text-[color:var(--02,#FFA800)] text-[18px] font-inter not-italic  font-semibol leading-normal underline">
-                      Lorem ipsum dolor sit amet
-                    </li>
-                    <li className="py-2 text-[color:var(--02,#FFA800)] text-[18px] not-italic font-inter  font-semibol leading-normal underline">
-                      Lorem ipsum dolor sit amet
-                    </li>
-                    <li className="py-2 text-[color:var(--02,#FFA800)] text-[18px] not-italic font-inter font-semibol leading-normal underline">
-                      Lorem ipsum dolor sit amet
-                    </li>
-                    <li className="py-2 text-[color:var(--02,#FFA800)] text-[18px] not-italic font-inter font-semibol leading-normal underline">
-                      Lorem ipsum dolor sit amet
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            {/*====================up comming event end================== */}
-          </div>
-
-          {/* ===================== Curently end=========================== */}
-
-          {/*=====================================Latest News ================ */}
-          <div className="relative ">
-          <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="140"
-              height="45"
-              viewBox="0 0 140 45"
-              fill="none"
-            >
-              <path
-                d="M1 1H110.203L138 44H1V1Z"
-                fill="#B42120"
-                stroke="#B42120"
-                stroke-width="2"
-              />
-            </svg>
-            
-            <div class="flex w-full text-[17px] items-center text-[#FFF] not-italic leading-normal font-inter font-semibold justify-center py-12 px-4  absolute   right-[30%] md:right-[34%] -top-10 md:top-[-8%]">
-              Latest News
-            </div>
-
-            <div className=" w-[320px] md:w-[450px] h-[324px]  border-2  border-[#B42120] bg-[#FFF] ">
-              <div className="flex items-center justify-center">
-                <ul class="list-disc py-5">
-                  <li className="py-5 text-[#000] font-inter text-[18px] not-italic  font-semibol leading-normal underline">
-                    Lorem ipsum dolor sit amet
-                  </li>
-                  <li className="py-5 text-[#000] text-[18px] font-inter not-italic  font-semibol leading-normal underline">
-                    Lorem ipsum dolor sit amet
-                  </li>
-                  <li className="py-5 text-[#000] text-[18px] not-italic font-inter  font-semibol leading-normal underline">
-                    Lorem ipsum dolor sit amet
-                  </li>
-                  <li className="py-5 text-[#000] text-[18px] not-italic  font-inter font-semibol leading-normal underline">
-                    Lorem ipsum dolor sit amet
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/*=====================================Latest News ================ */}
-        </div>
-      </div>
-
-      {/*================================================Mobaile view end =================== */}
+       </div>
     </>
   );
 };
