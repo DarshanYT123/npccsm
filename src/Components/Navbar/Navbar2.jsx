@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IoIosClose } from "react-icons/io";
 import Activedropdown from './Activedropdown'
+import Coursesdropdown from './Coursesdropdown'
 const Navbar2 = () => {
   const [navbar, setNavbar] = useState(false);
 
   const [selected, setSelected] = useState("Activities ")
+  const [selected1, setSelected1] = useState("Career ")
 
   return (
     <>
@@ -71,10 +73,16 @@ const Navbar2 = () => {
                 <path d="M1 0.75V50.75" stroke="black" stroke-opacity="0.4" />
               </svg>
 
-              <div className="flex flex-col px-4">
-                <h1 className="xl:text-[16px] lg:text-[14px] not-italic font-semibold  leading-normal font-inter tracking-[0.24px] text-[#B42120]">
+              <div className="flex flex-col px-4 cursor-pointer">
+              <div className="right-menu  ">
+                <h1 className="menu-text  xl:text-[16px] lg:text-[14px] not-italic font-semibold  leading-normal font-inter tracking-[0.24px] text-[#B42120]">
                   Courses
                 </h1>
+                <div className="dropdown-menu  rounded-md -right-10 z-50 ">
+                      <a href="/bba" className="py-2 text-center">BBA</a>
+                      <a href="/bca" className="py-2 text-center">BCA</a>
+                      </div>
+                      </div>
                 <h3 className="xl:text-[12px] lg:text-[10px] not-italic font-medium  leading-normal font-inter tracking-[0.12px] text-[#FFA800]">
                   Know More
                 </h3>
@@ -93,7 +101,7 @@ const Navbar2 = () => {
 
               <a href="/syllabus">
                 <div className="flex flex-col px-4">
-                  <h1 className="xl:text-[16px] lg:text-[14px] not-italic font-semibold  leading-normal font-inter tracking-[0.24px] text-[#B42120]">
+                  <h1 className=" xl:text-[16px] lg:text-[14px] not-italic font-semibold  leading-normal font-inter tracking-[0.24px] text-[#B42120]">
                     Syllabus
                   </h1>
                   <h3 className="xl:text-[12px] lg:text-[10px] not-italic font-medium  leading-normal font-inter tracking-[0.12px] text-[#FFA800]">
@@ -140,8 +148,6 @@ const Navbar2 = () => {
                 </h1>
                  {/* drop down desktop */}
                 <div className="dropdown-menu  rounded-md -right-10 z-50 ">
-                      <a href="/bba" className="py-2 text-center">BBA</a>
-                      <a href="/bca" className="py-2 text-center">BCA</a>
                       <a href="/ncc" className="py-2 text-center">NCC</a>
                       <a href="/nss" className="py-2 text-center">NSS</a>
                       <a href="/sports" className="py-2 text-center">SPORTS</a>
@@ -324,6 +330,8 @@ const Navbar2 = () => {
                     </a>
                   </div>
 
+                  <Coursesdropdown selected1={selected1} setSelected1={setSelected1}/>
+                  {/* 
                   <div className="flex flex-col pt-2">
                     <h1 className="text-[16px] not-italic font-semibold  leading-normal font-inter tracking-[0.24px] text-[#B42120]">
                       Courses
@@ -332,6 +340,7 @@ const Navbar2 = () => {
                       Know More
                     </h3>
                   </div>
+                  */}
 
                   <div className="flex flex-col pt-2">
                     <a href="/syllabus">

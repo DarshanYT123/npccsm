@@ -67,7 +67,7 @@ const Hero = () => {
             </div>
           </SwiperSlide>
         ))}
-        <div className=" left-16 absolute top-[21rem] z-40 ">
+        <div className="left-10 md:left-16 absolute top-[21rem] z-40 ">
         <div className="swiper-pagination1     "></div>
         <div className=" w-5 right-1.5 absolute top-[4rem]  z-40 ">
           <img src="/img/Arrow.png" className="arrowmoving" />

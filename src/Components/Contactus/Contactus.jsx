@@ -50,21 +50,49 @@ const Contactus = () => {
             <br /> TeleFax : 02764 -244381
           </p>
         </div>
-        <div className="md:pb-24 pr-28 flex flex-col md:pr-10 lg:pr-0  ">
+        <div className="md:pb-24 pr-16 flex flex-col md:pr-10 lg:pr-0  ">
           <h2 className=" font-KaiseiHarunoUmi py-3 md:py-10 text-[color:var(--01,#B42120)] lg:text-[26px]  not-italic font-bold leading-[normal] ">
             Email
           </h2>
           <div className="  ">
+     <a href="mailto:info@npccs.org">
             <div className="flex py-1 flex-row gap-x-4 ">
+            <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    viewBox="0 0 25 25"
+                    fill="none"
+                  >
+                    <path
+                      d="M2.99652 6.5C2.99652 5.39543 3.89195 4.5 4.99652 4.5H20.9965C22.1011 4.5 22.9965 5.39543 22.9965 6.5V18.5C22.9965 19.6046 22.1011 20.5 20.9965 20.5H4.99652C3.89195 20.5 2.99652 19.6046 2.99652 18.5V6.5ZM6.51511 6.5L12.9965 12.1712L19.4779 6.5H6.51511ZM20.9965 7.82877L13.655 14.2526C13.278 14.5825 12.715 14.5825 12.338 14.2526L4.99652 7.82877V18.5H20.9965V7.82877Z"
+                      fill="#B42120"
+                    />
+                  </svg>
               <h2 className=" lg:text-[18px]  text-black text-center text-lg not-italic font-Poppins font-medium leading-[157.833%] ">
                 info@npccs.org
               </h2>
             </div>
+            </a>
+            <a href="mailto:contact@npccs.org">
             <div className="flex py-1 flex-row gap-x-4 ">
+            <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    viewBox="0 0 25 25"
+                    fill="none"
+                  >
+                    <path
+                      d="M2.99652 6.5C2.99652 5.39543 3.89195 4.5 4.99652 4.5H20.9965C22.1011 4.5 22.9965 5.39543 22.9965 6.5V18.5C22.9965 19.6046 22.1011 20.5 20.9965 20.5H4.99652C3.89195 20.5 2.99652 19.6046 2.99652 18.5V6.5ZM6.51511 6.5L12.9965 12.1712L19.4779 6.5H6.51511ZM20.9965 7.82877L13.655 14.2526C13.278 14.5825 12.715 14.5825 12.338 14.2526L4.99652 7.82877V18.5H20.9965V7.82877Z"
+                      fill="#B42120"
+                    />
+                  </svg>
               <h2 className=" text-[18px] text-black text-center text-lg not-italic font-medium font-Poppins leading-[157.833%]">
                 contact@npccs.org
               </h2>
             </div>
+            </a>
           </div>
         </div>
         <div className="flex flex-col lg:pb-[3.3rem] pl-10 md:pl-0 px-4 ">
