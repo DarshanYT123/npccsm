@@ -8,7 +8,7 @@ const Navbar2 = () => {
   const [navbar, setNavbar] = useState(false);
 
   const [selected, setSelected] = useState("Activities ")
-  const [selected1, setSelected1] = useState("Career ")
+  const [selected1, setSelected1] = useState("Courses ")
 
   return (
     <>

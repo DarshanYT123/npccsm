@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
       <div className="py-3 bg-[#B42120]">
-        <h2 className="text-white font-Poppins text-center text-[10px] lg:text-[26px] md:text-[20px] not-italic font-bold leading-[157.833%] tracking-[0.78px] uppercase  ">
+        <h2 className="text-white font-Poppins text-center text-[8px] lg:text-[24px] md:text-[18px] not-italic font-bold leading-[157.833%] tracking-[0.78px] uppercase  ">
           " DO GOOD : FOR GOOD WILL COME BACK TO YOU "
         </h2>
       </div>
