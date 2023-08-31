@@ -24,7 +24,7 @@ const Coursesdropdown = ({ selected1, setSelected1 }) => {
                 {/* ===========================icon====================== */}
                 <div className='relative   '>
 
-                    <svg width="20" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg" className='absolute bottom-[0px]  lg:bottom-[0px] text-[#B42120]   left-16 lg:left-[4.5rem] md:left-20 '>
+                    <svg width="20" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg" className='absolute bottom-[0px]  lg:bottom-[0px] text-[#B42120]   left-[4.5rem] lg:left-[4.5rem] md:left-20 '>
                         <path d="M2 8L12.2401 16.3783C12.6822 16.7399 13.3178 16.7399 13.7599 16.3783L24 8" stroke="#B42120" stroke-width="3" stroke-linecap="round" />
                     </svg>
                 </div>

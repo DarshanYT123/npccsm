@@ -8,6 +8,7 @@ import ChairmanDesk from "./Components/ChairmanDesk/ChairmanDesk";
 import ChairmanTeam from "./Components/ChairmanTeam/ChairmanTeam";
 import Syllabus from "./Components/Syllabus/Syllabus";
 import PlacementPartner from "./Components/Placement/PlacementPartner";
+import Noticeboard from "./Components/Notice/Noticeboard";
 import Ncc from "./Components/Ncc/Ncc";
 import Nss from "./Components/Nss/Nss";
 import Sports from "./Components/Sports/Sports";
@@ -27,7 +28,7 @@ function App() {
       <Navbar />
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route index element={<Home />} />
           <Route path="/aboutSVKM" element={<Aboutus />} />
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/desk" element={<ChairmanDesk />} />
@@ -36,6 +37,7 @@ function App() {
           <Route path="/ncc" element={<Ncc />} />
           <Route path="/nss" element={<Nss />} />
           <Route path="/sports" element={<Sports />} />
+          <Route path="/noticeboard" element={<Noticeboard />} />
           <Route path="/placementpartner" element={<PlacementPartner />} />
           <Route path="/bca" element={<Bca />} />
           <Route path="/bba" element={<Bba />} />

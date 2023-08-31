@@ -226,28 +226,28 @@ const Navbar2 = () => {
       <div className="block lg:hidden">
         <nav className="">
           {/*=================Main header=== */}
-          <div className="flex flex-row gap-x-5 items-center justify-around py-2 bg-[#f0f0f0]">
-            <div className="flex flex-row items-center justify-around gap-x-5">
+          <div className="flex flex-row gap-x-1 items-center justify-around py-2 bg-[#f0f0f0]">
+            <div className="flex flex-row items-center justify-around gap-x-3">
               <div>
                 <a href="/" className=" ">
                   <img
                     src="./img/logo.jpg"
-                    className="w-[50px] h-[50px] md:w-[70px] md:h-[70px]"
+                    className="w-[40px] h-[40px] md:w-[70px] md:h-[70px]"
                     alt="logo"
                   />
                 </a>
               </div>
               <div>
                 <div className="">
-                  <h4 className="text-[5px] md:text-[10px] not-italic font-semibold font-[inter] leading-normal text-[#000000]">
+                  <h4 className="text-[9px] md:text-[10px] not-italic font-semibold font-[inter] leading-normal text-[#000000]">
                     Sarva Vidyalaya Kelavani Mandal’s
                   </h4>
-                  <h3 className="text-[7px] md:text-[12px] not-italic font-bold leading-normal font-[kaisei] text-[#B42120]">
+                  <h3 className="text-[9px] md:text-[12px] not-italic font-bold leading-normal font-[kaisei] text-[#B42120]">
                     Narsinhbhai Patel College of Computer Studies and Management
                   </h3>
-                  <h3 className="text-[5px] md:text-[10px] not-italic font-semibold font-inter leading-normal text-[#FFA800]">
+                  <h3 className="text-[8px] md:text-[10px] not-italic font-semibold font-inter leading-normal text-[#FFA800]">
                     A Constituent College of KSV{" "}
-                    <span className="text-[5px] md:text-[10px] not-italic font-semibold leading-normal text-[#000000]">
+                    <span className="text-[8px] md:text-[10px] not-italic font-semibold leading-normal text-[#000000]">
                       (NAAC Acredited with B+ Grade)
                     </span>
                   </h3>
@@ -261,7 +261,7 @@ const Navbar2 = () => {
                 className="text-gray-700 rounded-md outline-none "
                 onClick={() => setNavbar(!navbar)}
               >
-                {navbar ? <IoIosClose size={25} /> : <FiMenu size={25} />}
+                {navbar ? <IoIosClose size={25} /> : <FiMenu size={24} />}
               </button>
             </div>
           </div>
@@ -368,24 +368,6 @@ const Navbar2 = () => {
                   <Activedropdown selected={selected} setSelected={setSelected}/>
                  
                     </div>
-                  {/* <div className="flex flex-col pt-2">
-                    <h1 className="text-[16px] not-italic font-semibold  leading-normal font-inter tracking-[0.24px] text-[#B42120]">
-                      Activities
-                    </h1>
-
-                <div className="dropdown-menuphone  rounded-md -right-10  ">
-                      <a href="/bba" className="py-2 text-center">BBA</a>
-                      <a href="/bca" className="py-2 text-center">BCA</a>
-                      <a href="/ncc" className="py-2 text-center">NCC</a>
-                      <a href="/nss" className="py-2 text-center">NSS</a>
-                      <a href="/sports" className="py-2 text-center">SPORTS</a>
-                      </div>
-
-                    <h3 className="text-[12px] not-italic font-medium  leading-normal font-inter tracking-[0.12px] text-[#FFA800]">
-                      Know More
-                    </h3>
-                  
-                  </div> */}
                 </div>
 
                 {/*======================================Navbar1  end============ */}

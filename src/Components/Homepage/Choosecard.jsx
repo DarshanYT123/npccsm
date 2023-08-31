@@ -78,12 +78,12 @@ const Choosecard = () => {
 
   return (
     <>
+    <div id="features">
       <div className="lg:px-12 px-5 py-5">
         <h1 className=" text-[color:var(--01,#B42120)] font-KaiseiHarunoUmi text-[20px] lg:text-[32px] not-italic font-semibold leading-[normal]">
           Why Choose NPCCSM
         </h1>
       </div>
-
       <div className="px-10 md:px-10 py-10 bg-[#B42120] flex items-center justify-center">
         <Swiper
           spaceBetween={30}
@@ -140,6 +140,7 @@ const Choosecard = () => {
             })}
           </div>
         </Swiper>
+      </div>
       </div>
     </>
   );
