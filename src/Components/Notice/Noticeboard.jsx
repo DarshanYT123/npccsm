@@ -1,6 +1,58 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination, Autoplay } from "swiper/modules";
 
 const Noticeboard = () => {
+  const Board = [
+    {
+      Date: "21.08.2023",
+      Occassion:
+        "Reopen of Online Admission Portal",
+        Preview: "Click To View",
+      },
+      {
+        Date: "11.08.2023",
+        Occassion:
+          "B.A. 3rd and 5th Semester Admission Notice",
+          Preview: "Click To View",
+        },
+        {
+          Date: "08.08.2023",
+          Occassion:
+            "Reopen of Online Admission Portal",
+            Preview: "Click To View",
+          },
+          {
+            Date: "03.08.2023",
+            Occassion:
+              "Review Mark sheet distribution Notice",
+              Preview: "Click To View",
+            },
+            {
+              Date: "31.07.2023",
+              Occassion:
+                "Verification of Documents of 1st Semester",
+                Preview: "Click To View",
+              },
+              {
+                Date: "28.07.2023",
+                Occassion:
+                  "MDC COURSE FOR 1ST SEMESTER",
+                  Preview: "Click To View",
+                },
+                {
+                  Date: "21.07.2023",
+                  Occassion:
+                    "Notice for 1st Phase E-Counselling",
+                    Preview: "Click To View",
+                  },
+              ]
   return (
     <div>
       <div className="lg:px-12   pt-7 px-5 py-5">
@@ -27,7 +79,7 @@ const Noticeboard = () => {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
-                <tr className="bg-white">
+ <tr  className="bg-white">
                   <td className="md:p-3 px-[1.1rem] md:px-4 text-[13px] md:text-[14px] text-gray-700 md:whitespace-nowrap">
                     <a href="#" className="font-bold text-[#B42120] hover:underline">
                       21.08.2023

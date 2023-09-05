@@ -4,6 +4,7 @@ import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
 import Aboutus from "./Components/Aboutus/Aboutus";
 import Contactus from "./Components/Contactus/Contactus";
+import Career from "./Components/Career/Career";
 import ChairmanDesk from "./Components/ChairmanDesk/ChairmanDesk";
 import ChairmanTeam from "./Components/ChairmanTeam/ChairmanTeam";
 import Syllabus from "./Components/Syllabus/Syllabus";
@@ -32,6 +33,7 @@ function App() {
           <Route path="/aboutSVKM" element={<Aboutus />} />
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/desk" element={<ChairmanDesk />} />
+          <Route path="/career" element={<Career />} />
           <Route path="/faculties" element={<ChairmanTeam />} />
           <Route path="/syllabus" element={<Syllabus />} />
           <Route path="/ncc" element={<Ncc />} />
